@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="/css/jass.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-wrapper">
+          <a href="/" class="brand-logo">Tech Blog</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Create a Post</a></li>
+            {{else}}
+            <a href="/login">login</a>
+            {{/if}}
+          </ul>
+        </div>
+      </nav>
+
+      <main>
+
+      </main>
+<!-- Render script for logged in users only
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}} -->
+</body>
+</html>
