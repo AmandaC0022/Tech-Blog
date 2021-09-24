@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Amanda",
+      "email": "AmandaC0022@gmail.com",
+      "password": "admin"
+    },
+    {
+      "name": "Chris",
+      "email": "chrisipoo@gmail.com",
+      "password": "password12345"
+    },
+    {
+      "name": "Artimis",
+      "email": "kingpuds@aol.com",
+      "password": "demonpuds666"
+    },
+    {
+        "name": "Alice",
+        "email": "allygirl@aol.com",
+        "password": "buttlicker01"
+    },
+    {
+        "name": "Cooper",
+        "email": "coppeycop@aol.com",
+        "password": "daddysfavorite"
+    }
+  ]
