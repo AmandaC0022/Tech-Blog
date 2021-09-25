@@ -8,6 +8,7 @@
 }
 main {
     display: flex; 
+    flex-direction: row;
     justify-content: center;
 }
 * {
@@ -66,4 +67,23 @@ input {
 }
 .login-header {
     color: var(--blue); 
+}
+
+/* Blog Page */
+.custom-card {
+    border: 2px solid var(--lime); 
+    background-color: var(--dark);
+    border-radius: var(--round);
+    padding: 10px; 
+    margin: 20px; 
+}
+.custom-card-title h2 {
+    color: var(--orange);
+    font-size: 2em;
+}
+.custom-card-title p {
+    color: var(--blue);
+}
+.custom-card-content p{
+    font-family: sans-serif; 
 }
