@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog</title>
+    <!-- Materialize Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@300&display=swap" rel="stylesheet">
+    <!-- My Style Sheets -->
+    <link rel="stylesheet" href="/public/css/jass.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav-wrapper custom-nav">
+            <a href="/" class="brand-logo" id="tech-blog-logo">Tech Blog</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <!-- Conditionally render login or logout links -->
+            {{#if logged_in}}
+            <li><a href="/">Home</a></li>
+            <li><a href="/blog">Create a Post</a></li>
+            {{else}}
+            <li><a href="/login">Login</a></li>
+            {{/if}}
+            </ul>
+        </div>
+    </nav>
+    <main class="container container-fluid mt-5">
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
