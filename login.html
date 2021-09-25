@@ -30,10 +30,27 @@
           </ul>
         </div>
       </nav>
-
-      <main>
-        <!-- Displays the log in page -->
-      </main>
+  <main>
+      <div class="row">
+        <form class="col s12">
+          <div class="row form-container">
+            <h1 class="login-header">Login</h1>
+            <div class="input-field col s12">
+              <input id="email" type="email" placeholder="Username" class="validate">
+            </div>
+            <div class="input-field col s12">
+              <input id="password" type="password" placeholder="Password" class="validate">
+            </div>
+            <div class="col s12 center">
+              <a href="/blog" class="btn-large login-btn">Login</a>
+            </div>
+            <div>
+              <a href="/" class="col s12 sign-up">Sign Up Here</a>
+            </div>
+          </div>
+        </form>
+      </div>
+  </main>
 <!-- Render script for logged in users only
   {{#if logged_in}}
   <script src="/js/logout.js"></script>

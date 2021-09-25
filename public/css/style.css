@@ -4,31 +4,66 @@
     --orange:#ED6921; 
     --lime:#E6D53F; 
     --blue:#16D6F7; 
+    --round: 25px; 
 }
-
+main {
+    display: flex; 
+    justify-content: center;
+}
 * {
     font-family: 'Gemunu Libre', sans-serif;
-    font-size: 16px;
+    font-size: 20px;
     background-color: var(--dark);
 }
 
+/* Nav Bar */
 #tech-blog-logo {
     font-size: 2.5em;
 }
-
 #tech-blog-logo:hover {
     color: var(--blue); 
 }
-
 .custom-nav {
     background-color: var(--lime);
 }
-
 .custom-nav li a{
     background-color: var(--lime); 
-    font-size: 1.5em; 
+    font-size: 1.25em; 
+}
+.custom-nav li a:hover {
+    color: var(--blue); 
 }
 
-.custom-nav li a:hover {
+/* Login Page */
+.form-container { 
+    color: var(--orange); 
+    border: 2px solid var(--lime); 
+    align-self: center;
+    border-radius: var(--round); 
+    padding: var(--round); 
+    color: var(--orange); 
+    margin-top: 50px;
+}
+input {
+    color: var(--orange); 
+}
+::placeholder{
+    color: var(--orange); 
+}
+.sign-up {
+    color: var(--blue); 
+}
+.sign-up:hover {
+    color: var(--orange); 
+}
+.login-btn {
+    background-color: var(--blue); 
+    border-radius: var(--round);
+}
+.login-btn:hover {
+    background-color: var(--orange); 
+    color: white; 
+}
+.login-header {
     color: var(--blue); 
 }
