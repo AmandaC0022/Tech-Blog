@@ -4,12 +4,12 @@
         <div class="card custom-card">
             <div class="card-content custom-card-content white-text">
                 <div class="card-title custom-card-title">
-                    <a href="#">
-                    <h2>Why is MVC so important?</h2>
+                    <a href="/blog/{{blog.id}}">
+                        <h2>{{blog.title}}</h2>
                     </a>
-                    <p>Posted by AmandaC0022 on 9/24/2021</p>
+                    <p>Posted by {{blog.user.name}} on {{format_date blog.date}}</p>
                 </div>
-            <p>MVC allows developers to maintain a true separation of concerns, devising their code between the Model layer for data, the View layer for design, and the Controller layer for application logic.</p>
+            <p>{{blog.description}}</p>
             </div>
         </div>
     </div>
