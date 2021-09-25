@@ -1,18 +1,18 @@
 {{!-- This will display all of current posted blogs --}}
-{{#each blogs as |blog| }}
 <div class="row">
     <div class="col s12">
+        {{#each blogs as |blog| }}
         <div class="card custom-card">
             <div class="card-content custom-card-content white-text">
                 <div class="card-title custom-card-title">
                     <a href="/blog/{{blog.id}}">
                         <h2>{{blog.title}}</h2>
                     </a>
-                    <p>Posted by {{blog.user.name}} on </p>
+                    <p>Posted by {{blog.user.name}} on {{format_date blog.date_created}} </p>
                 </div>
             <p>{{blog.description}}</p>
             </div>
         </div>
+        {{/each}}
     </div>
 </div>
-{{/each}}
