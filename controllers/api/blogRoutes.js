@@ -3,7 +3,7 @@ const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 //this is the route to create a new blog
-router.post('/', withAuth, async (req, res) => {
+router.post('/create', withAuth, async (req, res) => {
   try {
     const newBlog = await Blog.create({
       ...req.body,
@@ -11,6 +11,11 @@ router.post('/', withAuth, async (req, res) => {
     });
 
     res.status(200).json(newBlog);
+
+    res.render('create', { 
+      blogs, 
+      logged_in: req.session.logged_in 
+    });
   } catch (err) {
     res.status(400).json(err);
   }

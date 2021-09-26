@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
-//this sets the home route for the sign up page 
+// 
 router.post('/', async (req, res) => {
   try {
     const userData = await User.create(req.body);
