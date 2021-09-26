@@ -1,10 +1,13 @@
 {{!-- This is structuring what each blog will look like --}}
-<div class="card custom-card">
+<form class="edit-blog">
+    <div class="card custom-card">
     <div class="card-content custom-card-content white-text">
         <div class="card-title custom-card-title">
-            <h2>{{title}}</h2>
-            <p>Posted by {{user.name}} on {{format_date date_created}} </p>
+            <textarea id="blogTitle" type="text" class="materialize-textarea">{{title}}</textarea>
         </div>
-    <p>{{description}}</p>
+    <textarea id="textarea1" class="materialize-textarea">{{description}}</textarea>
     </div>
+    <button data-id="{{id}}" class="btn-large save-btn">Save</button>
+    <button data-id="{{id}}" class="btn-large custom-btn">Delete</button>
 </div>
+</form>

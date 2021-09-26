@@ -87,3 +87,31 @@ input {
 .custom-card-content p{
     font-family: sans-serif; 
 }
+
+.custom-btn {
+    background-color: var(--orange); 
+    color: white; 
+    border-radius: var(--round);
+    margin: var(--round); 
+}
+
+.custom-btn:hover {
+    background-color: var(--cherry);
+    color: white; 
+}
+
+.save-btn {
+    background-color: var(--blue); 
+    color: white; 
+    border-radius: var(--round);
+    margin: var(--round); 
+}
+
+.save-btn:hover {
+    background-color: var(--lime);
+    color: white; 
+}
+
+textarea {
+    color: white; 
+}
