@@ -1,5 +1,54 @@
 {{!-- This is the main template for the webpage --}}
-<!DOCTYPE html>
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+
+<!-- BootstrapValidator CSS -->
+<link
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css"
+/>
+
+<!-- Latest compiled and minified JavaScript -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+  crossorigin="anonymous"
+></script>
+<script
+  src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.0/js/bootstrapValidator.min.js"
+></script>
+
+<h1>Blogs CMS</h1>
+<nav>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/dashboard">Dashboard</a></li>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/register">Register</a></li>
+    <li><a href="/blogs/1">Blog Post</a></li>
+    <li><a href="/blogs/new">Create Blog</a></li>
+    <li><a href="/blogs/edit/1">Edit Blog</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+{{{body}}}
+</main>
+
+<script src="/js/auth.js"></script>
+
+
+{{!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,40 +68,26 @@
 
 <body>
     <nav>
-      <li><a href='/'> Home </a></li>
-      <li><a href='/dashboard'> Dashboard </a></li>
-      <li><a href='/login'> Login </a></li>
-      <li><a href='/register'> Register </a></li>
-      <li><a href='/blogs/new'> Create a Blog </a></li>
-      <li><a href='/blogs/edit/:id'> Edit a Blog </a></li>
-
-        {{!-- <div class="nav-wrapper custom-nav">
-            <a href="/" class="brand-logo" id="tech-blog-logo">Tech Blog</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <!-- Conditionally render login or logout links -->
-            {{#if logged_in}}
-            <li><a href="/">Home</a></li>
-            <li><a href="/create">Create a Post</a></li>
-            {{else}}
-            <li><a href="/login">Login</a></li>
-            {{/if}}
-            </ul>
-        </div> --}}
+      <div class="nav-wrapper custom-nav">
+        <a href="/" class="brand-logo" id="tech-blog-logo">Tech Blog</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="/">Home</a></li>
+          <li><a href="/blog/new">Create a Post</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/blog/edit/:id">Edit a Post</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </div>
     </nav>
+    </div>
     <main>
 
       <!-- Render the sub layout -->
       {{{ body }}}
 
     </main>
-
-  <!-- Render script for logged in users only -->
-  {{!-- {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}} --}}
 </body>
 
-{{!-- <script
-  href=''>
-</script> --}}
-</html>
+{{!-- <script src='js/blog.js'></script> --}}
+{{!-- <script src='js/login.js'></script> --}}
+</html> --}}

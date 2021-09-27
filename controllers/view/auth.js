@@ -1,8 +1,11 @@
-const router = require('express').Router();
-const { User } = require('../../models');
+const router = require("express").Router();
 
-router.get('/', async (req, res) => {
-  res.render('login'); 
-});
+router.get('/login', (req, res) => {
+    res.render("login")
+})
 
-module.exports = router;
+router.get('/register', (req, res) => {
+    res.render("register")
+})
+
+module.exports = router

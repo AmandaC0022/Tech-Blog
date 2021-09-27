@@ -1,5 +1,19 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">{{title}}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">By {{user.name}}</h6>
+    <h6 class="card-subtitle mb-2 text-muted">{{createdAt}}</h6>
+    <p class="card-text">{{content}}</p>
+    <a href="/blogs/{{id}}">Read More</a>
+    {{#if isAuthor}}
+        <i class="fa fa-pencil"></i><a href="/blogs/edit/{{id}}">Edit</a>
+        <Button>Delete</Button>
+    {{/if}}
+  </div>
+</div>
+
 {{!-- This creates a blog template so that all blogs are styled the same way --}}
-<div class="card custom-card">
+{{!-- <div class="card custom-card">
     <div class="card-content custom-card-content white-text">
         <div class="card-title custom-card-title">
             <h2>{{blog.title}}</h2>
@@ -7,4 +21,4 @@
         </div>
     <p>{{blog.description}}</p>
     </div>
-</div>
+</div> --}}

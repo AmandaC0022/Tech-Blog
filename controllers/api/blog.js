@@ -1,30 +1,51 @@
 const router = require('express').Router();
-const { Blog } = require('../../models'); 
+const { Post } = require('../../models');
 
-//create a new blog
-router.post('/', async (req, res) => {
+router.post("/", async (req, res) => {
     try {
-      const blogData = await Blog.create(req.body);
-  
-      res.status(200).json(blogData);
-    } catch (err) {
-      res.status(400).json(err);
-    }
-});
+        const postData = await Post.create(req.body);
+        if (postData) {
+            res.status(201).send(postData)
+        } else {
+          res.status(400).send('post not created')
+        }
+      } catch (err) {
+        res.status(500).json(err);
+      }
+})
 
-//delete a blog using the blog_id
-router.delete('/:id', async (req, res) => {
+router.put("/:id", async (req, res) => {
     try {
-        const blogData = await Blog.destroy(req.body, {
+        const postData = await Post.update(req.body, {
             where: {
                 id: req.params.id
             }
-        }); 
-        res.status(200).json(blogData);
-    } catch (err) {
-    res.status(400).json(err);
-    }
-}); 
+        });
+        if (postData) {
+            res.status(201).send(postData)
+        } else {
+          res.status(400).send('post not created')
+        }
+      } catch (err) {
+        res.status(500).json(err);
+      }
+})
 
-//TO DO: create put request to edit a blog 
-module.exports = router; 
+router.delete("/:id", async (req, res) => {
+    try {
+        const data = await Post.destroy({
+            where: {
+                id: req.params.id
+            }
+        });
+        if (data) {
+            res.status(200).end();
+          } else {
+            res.status(404).end();
+          }
+      } catch (err) {
+        res.status(500).json(err);
+      }
+})
+
+module.exports = router;
