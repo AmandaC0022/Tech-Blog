@@ -6,15 +6,12 @@
     --blue:#16D6F7; 
     --round: 25px; 
 }
-main {
-    display: flex; 
-    flex-direction: row;
-    justify-content: center;
-}
+
 * {
     font-family: 'Gemunu Libre', sans-serif;
     font-size: 20px;
-    background-color: var(--dark);
+    background-color: var(--dark); 
+    color: white; 
 }
 
 /* Nav Bar */
@@ -39,7 +36,6 @@ main {
 .form-container { 
     color: var(--orange); 
     border: 2px solid var(--lime); 
-    align-self: center;
     border-radius: var(--round); 
     padding: var(--round); 
     color: var(--orange); 
@@ -57,18 +53,12 @@ input {
 .sign-up:hover {
     color: var(--orange); 
 }
-.login-btn {
-    background-color: var(--blue); 
-    border-radius: var(--round);
-}
-.login-btn:hover {
-    background-color: var(--orange); 
-    color: white; 
-}
-.login-header {
+.form-header {
     color: var(--blue); 
 }
-
+.email-message {
+    color: var(--cherry);  
+}
 /* Blog Page */
 .custom-card {
     border: 2px solid var(--lime); 
@@ -87,31 +77,23 @@ input {
 .custom-card-content p{
     font-family: sans-serif; 
 }
-
 .custom-btn {
     background-color: var(--orange); 
     color: white; 
     border-radius: var(--round);
     margin: var(--round); 
 }
-
-.custom-btn:hover {
-    background-color: var(--cherry);
-    color: white; 
-}
-
 .save-btn {
     background-color: var(--blue); 
     color: white; 
     border-radius: var(--round);
     margin: var(--round); 
 }
-
 .save-btn:hover {
     background-color: var(--lime);
     color: white; 
 }
-
 textarea {
-    color: white; 
+    color: white;
+    height: 6em;  
 }
