@@ -1,16 +1,16 @@
 [
     {
-      "comment_data": "I am trying to figure all of this out.",
-      "user_id": 1,
-      "blog_id": 1
+        "comment_body": "I am trying to figure all of this out.",
+        "user_id": 1,
+        "blog_id": 1
     },
     {
-        "comment_data": "I am still learning.",
+        "comment_body": "I am still learning.",
         "user_id": 3,
         "blog_id": 1
     },
     {
-        "comment_data": "I really like this!",
+        "comment_body": "I really like this!",
         "user_id": 2,
         "blog_id": 2
     }
