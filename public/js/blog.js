@@ -1,8 +1,8 @@
 const newFormHandler = async (event) => {
     event.preventDefault();
   
-    const title = document.querySelector('#blogTitle').value.trim();
-    const description = document.querySelector('#textarea1').value.trim();
+    const title = document.querySelector('#blog-title').value.trim();
+    const description = document.querySelector('#blog-content').value.trim();
   
     if (title && description) {
       const response = await fetch(`/api/blog`, {
@@ -42,6 +42,6 @@ const newFormHandler = async (event) => {
     .addEventListener('submit', newFormHandler);
   
   document
-    .querySelector('.edit-blog')
+    .querySelector('.new-blog-form')
     .addEventListener('click', delButtonHandler);
   

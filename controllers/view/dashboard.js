@@ -1,14 +1,14 @@
 const router = require("express").Router();
-const { Post, User } = require('../../models');
-const withAuth = require('../../utils/auth');
+const { Blog, User } = require('../../models');
+// const withAuth = require('../../utils/auth');
 
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
   try {
-    const postData = await Post.findAll({
+    const blogData = await Blog.findAll({
       include: [User],
     });
 
-    const blogs = postData.map((post) => post.get({ plain: true }));
+    const blogs = blogData.map((blog) => blog.get({ plain: true }));
 
     res.render("dashboard", {blogs})
   } catch (err) {

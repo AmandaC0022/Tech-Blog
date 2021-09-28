@@ -1,31 +1,48 @@
 const router = require("express").Router();
-const { Post } = require('../../models');
+const { Blog, User } = require('../../models');
 
 router.get('/new', (req, res) => {
     res.render("blogNew")
 })
 
-router.get('/:id', (req, res) => {
-    const post = {
-        title: "First Blog",
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacus diam, vehicula id elementum sit amet, accumsan at tellus. Donec sed lobortis lectus. Quisque dapibus lacinia orci, iaculis sagittis nisl pharetra eu. Cras sollicitudin lacinia lacus nec semper. Duis nec ligula eros. Phasellus bibendum mauris vel laoreet condimentum.",
-        user: {
-          userName: "teckels",
-          name: "Trey Eckels",
-        },
-        createdAt: "YYYY-MM-DD HH:MM:SS",
-      };
-    res.render("blogPost", post)
-})
+router.get('/:id', async (req, res) => {
+  try {
+    const blogData = await Blog.findByPk(req.params.id, {
+      include: {
+        model: User, 
+        attributes: ['name'],
+      }
+    });
 
-router.get('/edit/:id', (req, res) => {
-    const blogData = {
-        title: "Title",
-        content:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean lacus diam, vehicula id elementum sit amet, accumsan at tellus. Donec sed lobortis lectus. Quisque dapibus lacinia orci, iaculis sagittis nisl pharetra eu. Cras sollicitudin lacinia lacus nec semper. Duis nec ligula eros. Phasellus bibendum mauris vel laoreet condimentum.",
-      };
-    res.render("blogEdit", {blogData})
-})
+    if (!blogData) {
+      res.status(404).json({ message: 'No Blog found with this id!' });
+      return;
+    }
+    const blogs = blogData.get({ plain: true });
+    
+    res.render('blogPost', { ...blogs });
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+}); 
+
+router.get('/edit/:id', async (req, res) => {
+  try {
+    const data = await Blog.findByPk(req.params.id, {
+    });
+
+    if (!data) {
+      res.status(404).json({ message: 'No Blog found with this id!' });
+      return;
+    }
+    const blogData = data.get({ plain: true });
+    
+    res.render('blogEdit', {blogData});
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+}); 
 
 module.exports = router

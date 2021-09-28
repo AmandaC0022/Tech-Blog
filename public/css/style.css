@@ -97,3 +97,13 @@ textarea {
     color: white;
     height: 6em;  
 }
+.delete-btn {
+    background-color: var(--orange); 
+    color: white; 
+    border-radius: var(--round);
+    margin: var(--round); 
+}
+.delete-btn:hover {
+    background-color: var(--cherry);
+    color: white; 
+}

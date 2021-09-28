@@ -1,13 +1,13 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { Blog } = require('../../models');
 
 router.post("/", async (req, res) => {
     try {
-        const postData = await Post.create(req.body);
-        if (postData) {
-            res.status(201).send(postData)
+        const blogData = await Blog.create(req.body);
+        if (blogData) {
+            res.status(201).send(blogData)
         } else {
-          res.status(400).send('post not created')
+          res.status(400).send('blog not created')
         }
       } catch (err) {
         res.status(500).json(err);
@@ -16,15 +16,15 @@ router.post("/", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
     try {
-        const postData = await Post.update(req.body, {
+        const blogData = await Blog.update(req.body, {
             where: {
                 id: req.params.id
             }
         });
-        if (postData) {
-            res.status(201).send(postData)
+        if (blogData) {
+            res.status(201).send(blogData)
         } else {
-          res.status(400).send('post not created')
+          res.status(400).send('Blog not created')
         }
       } catch (err) {
         res.status(500).json(err);
@@ -33,7 +33,7 @@ router.put("/:id", async (req, res) => {
 
 router.delete("/:id", async (req, res) => {
     try {
-        const data = await Post.destroy({
+        const data = await Blog.destroy({
             where: {
                 id: req.params.id
             }

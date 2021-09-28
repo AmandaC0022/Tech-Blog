@@ -3,13 +3,13 @@
     <div class="card-content custom-card-content white-text">
         <div class="card-title custom-card-title">
             <h2>{{title}}</h2>
-            <p>Posted by {{user.name}} on {{format_date date_created}} </p>
+            <p>Posted by {{user.name}} on {{date_created}} </p>
         </div>
-    <p>{{content}}</p>
+    <p>{{description}}</p>
     <a href="/blogs/{{id}}">Read More</a>
-    {{#if isAuthor}}
-        <i class="fa fa-pencil"></i><a href="/blogs/edit/{{id}}">Edit</a>
-        <Button>Delete</Button>
-    {{/if}}
+    {{!-- {{#if isAuthor}} --}}
+        <a href="/blogs/edit/{{id}}"><button class="save-btn btn-large">Edit</button></a>
+        <Button class="delete-btn btn-large">Delete</Button>
+    {{!-- {{/if}} --}}
     </div>
 </div>

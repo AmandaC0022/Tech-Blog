@@ -1,12 +1,12 @@
 <div class="row">
-    <form class="col s12 custom-form">
+    <form class="col s12 .new-blog-form">
         <div class="row form-container">
             <h1 class="form-header">Create a New Blog</h1>
             <div class="input-field col s12">
-                <input id="blog-title" type="text" required="required" value="{{title}}" placeholder="Enter Blog Title">
+                <input id="blog-title" type="text" data-id="blog-title" required="required" value="{{title}}" placeholder="Enter Blog Title">
             </div>
             <div class="input-field col s12 materialize-textarea">
-                <textarea id="blog-content" col="40" required="required"  placeholder="Enter Blog Content">{{content}}</textarea>
+                <textarea id="blog-content" data-id="blog-content" col="40" required="required"  placeholder="Enter Blog Content">{{description}}</textarea>
             </div>
             <div class="col s12 center">
                 <button type="submit" class="btn-large save-btn">Save</button>

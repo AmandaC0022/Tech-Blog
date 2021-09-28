@@ -1,6 +1,6 @@
-$("#login-form").bootstrapValidator();
+document.querySelector("#login-form").bootstrapValidator();
 
-$("#login-form").submit(async (evt) => {
+document.querySelector('#login-form').submit(async (evt) => {
     evt.preventDefault();
     const email = document.querySelector("#user-email").value
     const password = document.querySelector("#user-password").value
