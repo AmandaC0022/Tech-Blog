@@ -1,17 +1,22 @@
 [
     {
-        "comment_body": "I am trying to figure all of this out.",
-        "user_id": 1,
-        "blog_id": 1
-    },
-    {
-        "comment_body": "I am still learning.",
-        "user_id": 3,
-        "blog_id": 1
-    },
-    {
-        "comment_body": "I really like this!",
+        "comment_body": "I really like this structure.",
         "user_id": 2,
+        "blog_id": 1
+    },
+    {
+        "comment_body": "I am still trying to understand this...",
+        "user_id": 1,
         "blog_id": 2
+    },
+    {
+        "comment_body": "Huh?",
+        "user_id": 4,
+        "blog_id": 3
+    },
+    {
+        "comment_body": "That is great advice!",
+        "user_id": 5,
+        "blog_id": 4
     }
 ]
