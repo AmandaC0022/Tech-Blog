@@ -2,8 +2,9 @@ const router = require('express').Router();
 const { Blog } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-
-router.post("/", withAuth, async (req, res) => {
+//This creates a new blog
+//THIS WORKS!!! 
+router.post("/", async (req, res) => {
     try {
         const newBlog = await Blog.create(req.body);
         if (newBlog) {
@@ -16,7 +17,9 @@ router.post("/", withAuth, async (req, res) => {
       }
 })
 
-router.put("/:id", withAuth, async (req, res) => {
+//This edits an already existing blog
+//THIS WORKS!!! 
+router.put("/edit/:id", async (req, res) => {
     try {
         const blogData = await Blog.update(req.body, {
             where: {
@@ -33,7 +36,9 @@ router.put("/:id", withAuth, async (req, res) => {
       }
 })
 
-router.delete("/:id", withAuth, async (req, res) => {
+//This deletes a blog
+//THIS WORKS!!! 
+router.delete("/:id", async (req, res) => {
     try {
         const data = await Blog.destroy({
             where: {

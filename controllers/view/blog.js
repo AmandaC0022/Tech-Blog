@@ -2,10 +2,14 @@ const router = require("express").Router();
 const { Blog, User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
+//this shows the blogNew page
+//THIS WORKS!! 
 router.get('/new', (req, res) => {
     res.render("blogNew")
 })
 
+//this shows a certain blog by using it's ID
+//THIS WORKS!! 
 router.get('/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
@@ -28,6 +32,8 @@ router.get('/:id', async (req, res) => {
   }
 }); 
 
+// This shows the edit blog page with a certain blog on the page
+//this works!! 
 router.get('/edit/:id', async (req, res) => {
   try {
     const data = await Blog.findByPk(req.params.id, {
