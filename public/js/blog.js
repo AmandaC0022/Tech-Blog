@@ -40,10 +40,10 @@ if (event.target.hasAttribute('data-id')) {
 }; 
   
 document
-  .querySelector('#save-btn')
+  .querySelector('.new-blog-form')
   .addEventListener('submit', newFormHandler);
 
 document
   .querySelector('#delete-btn')
-  .addEventListener('submit', delButtonHandler);
+  .addEventListener('click', delButtonHandler);
   

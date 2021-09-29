@@ -16,7 +16,7 @@ const loginFormHandler = async (event) => {
   
       if (response.ok) {
         // If successful, redirect the browser to the dashboard page
-        document.location.replace('/dashboard');
+        document.location.replace('/');
       } else {
         alert("Something went wrong!", response.statusText);
       }
@@ -61,7 +61,7 @@ if (response.ok) {
 document.querySelector('#logout').addEventListener('click', logout);
 
 document
-.querySelector('#login-form')
+.querySelector('.login-form')
 .addEventListener('submit', loginFormHandler);
 
 document

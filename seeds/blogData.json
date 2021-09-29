@@ -15,7 +15,7 @@
       "user_id": 3
     },
     {
-      "title": "Handblebars Tip",
+      "title": "Handlebars Tip",
       "description": "I have learned that you must match the res.render('pageName') to the handlebar's file name for it to correctly render the page.",
       "user_id": 4
     } 
