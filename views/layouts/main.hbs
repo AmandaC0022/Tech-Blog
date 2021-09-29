@@ -16,9 +16,6 @@
     {{!-- My Style Sheets --}}
     <link rel="stylesheet" href="/css/jass.css">
     <link rel="stylesheet" href="/css/style.css">
-    {{!-- My Javascript Link --}}
-    <script type="text/javascript" src="/js/auth.js"></script>
-    <script type="text/javascript" src="/js/helpers.js"></script>
     {{!-- Bootstrap Validator --}}
     <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
     <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
@@ -31,10 +28,14 @@
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="/">Home</a></li>
           <li><a href="/dashboard">Dashboard</a></li>
-          <li><a href="/login">Login</a></li>
           <li><a href="/register">Register</a></li>
           {{!-- <li><a href="/blogs/1">Blog Post</a></li> --}}
           <li><a href="/blogs/new">Create Blog</a></li>
+          {{#if logged_in}}
+          <li><a id="logout" href="/login">Logout</a></li>
+          {{else}}
+          <li><a href="/login">Login</a></li>
+          {{/if}}
         </ul>
       </div>
     </nav>
@@ -45,5 +46,8 @@
       {{{ body }}}
 
     </main>
+    {{!-- My Javascript Link --}}
+    <script type="text/javascript" src="/js/auth.js"></script>
+    <script type="text/javascript" src="/js/helpers.js"></script>
 </body>
 </html>
